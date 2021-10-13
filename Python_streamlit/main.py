@@ -76,11 +76,17 @@ option = st.selectbox(
 
 'あなたの好きな数字は、', option, 'です。'
 
-# テキスト入力
-st.write('Interactive Widgets')
-text = st.text_input('あなたの趣味を教えて下さい。')
-'あなたの趣味：', text
 
+st.write('Interactive Widgets')
+
+
+# サイドバーに表示させる
+# テキスト入力
 # スライダー
-condition = st.slider('あなたの今の調子は？', 0, 100, 50)
+condition = st.sidebar.slider('あなたの今の調子は？', 0, 100, 50)
+text = st.sidebar.text_input('あなたの趣味を教えて下さい。')
+
+'あなたの趣味：', text
 'コンディション', condition
+
+
